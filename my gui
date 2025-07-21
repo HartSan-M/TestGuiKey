@@ -1,0 +1,54 @@
+--// Random Fun GUI
+local gui = Instance.new("ScreenGui")
+gui.Name = "UnlockedRandomGUI"
+gui.ResetOnSpawn = false
+gui.Parent = game:GetService("CoreGui")
+
+local frame = Instance.new("Frame", gui)
+frame.Size = UDim2.new(0, 300, 0, 200)
+frame.Position = UDim2.new(0.5, -150, 0.5, -100)
+frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+frame.BorderSizePixel = 0
+
+local title = Instance.new("TextLabel", frame)
+title.Size = UDim2.new(1, 0, 0.25, 0)
+title.Position = UDim2.new(0, 0, 0, 0)
+title.Text = "🎉 GUI Unlocked!"
+title.TextColor3 = Color3.new(1, 1, 1)
+title.Font = Enum.Font.GothamBold
+title.TextSize = 22
+title.BackgroundTransparency = 1
+
+local emoji = Instance.new("TextLabel", frame)
+emoji.Size = UDim2.new(1, 0, 0.25, 0)
+emoji.Position = UDim2.new(0, 0, 0.25, 0)
+emoji.Text = "😎💻✨"
+emoji.TextColor3 = Color3.new(1, 1, 1)
+emoji.Font = Enum.Font.Gotham
+emoji.TextSize = 28
+emoji.BackgroundTransparency = 1
+
+local text = Instance.new("TextLabel", frame)
+text.Size = UDim2.new(1, -20, 0.3, 0)
+text.Position = UDim2.new(0, 10, 0.5, 0)
+text.Text = "You have entered the right key!\nNow go touch grass 🌱"
+text.TextColor3 = Color3.fromRGB(200, 255, 200)
+text.Font = Enum.Font.Gotham
+text.TextSize = 16
+text.TextWrapped = true
+text.TextYAlignment = Enum.TextYAlignment.Top
+text.BackgroundTransparency = 1
+
+local close = Instance.new("TextButton", frame)
+close.Size = UDim2.new(0.3, 0, 0.2, 0)
+close.Position = UDim2.new(0.35, 0, 0.8, 0)
+close.Text = "Bye 👋"
+close.Font = Enum.Font.GothamBold
+close.TextSize = 16
+close.TextColor3 = Color3.new(1, 1, 1)
+close.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
+close.BorderSizePixel = 0
+
+close.MouseButton1Click:Connect(function()
+	gui:Destroy()
+end)
